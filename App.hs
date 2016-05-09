@@ -16,8 +16,10 @@ import Control.Concurrent.STM
 import Control.Concurrent.Async
 import Data.List
 import Data.Maybe
+import Data.Aeson
 import Data.Function
 import Text.Printf
+import qualified Data.ByteString.Lazy as B
 
 import Util
 import AppDefs
@@ -87,7 +89,8 @@ fetchBridgeState = do
   bridgeIP <- view $ aePC . pcBridgeIP
   userID   <- view $ aePC . pcUserID
   -- Request all light information
-  (newLights :: Lights) <- bridgeRequestRetryTrace MethodGET bridgeIP noBody userID "lights"
+  (newLights :: Lights) <- fromJust . decode <$> (liftIO $ B.readFile "./lights.json")
+
   -- Do all updating as a single transaction
   broadcast  <- view aeBroadcast
   tvarLights <- view aeLights
