@@ -14,6 +14,8 @@ import Control.Monad
 import Control.Monad.Reader
 import Control.Concurrent.STM
 import Control.Concurrent.Async
+import Data.Aeson
+import qualified Data.ByteString.Lazy as BS
 import Data.List
 import Data.Maybe
 import Data.Function
@@ -22,8 +24,8 @@ import Text.Printf
 import Util
 import AppDefs
 import HueJSON
-import HueREST
-import PersistConfig
+--import HueREST
+--import PersistConfig
 import WebUI
 import LightColor
 
@@ -89,10 +91,10 @@ fetchBridgeState :: AppIO ()
 fetchBridgeState = do
   -- Request all light information
   (newLights :: Lights) <- do
-    pc           <- view aePC
-    bridgeIP     <- liftIO . atomically $ (^. pcBridgeIP    ) <$> readTVar pc
-    bridgeUserID <- liftIO . atomically $ (^. pcBridgeUserID) <$> readTVar pc
-    bridgeRequestRetryTrace MethodGET bridgeIP noBody bridgeUserID "lights"
+    --pc           <- view aePC
+    --bridgeIP     <- liftIO . atomically $ (^. pcBridgeIP    ) <$> readTVar pc
+    --bridgeUserID <- liftIO . atomically $ (^. pcBridgeUserID) <$> readTVar pc
+    fromJust . decode <$> liftIO (BS.readFile "mock/lights.json")--bridgeRequestRetryTrace MethodGET bridgeIP noBody bridgeUserID "lights"
   -- Do all updating as a single transaction
   broadcast  <- view aeBroadcast
   tvarLights <- view aeLights

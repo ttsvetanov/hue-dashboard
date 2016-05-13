@@ -5,6 +5,8 @@ module Main (main) where
 
 import Data.Monoid
 import Data.Maybe
+import Data.Aeson
+import qualified Data.ByteString.Lazy as BS
 import qualified Data.HashMap.Strict as HM
 import Control.Lens
 import Control.Exception
@@ -13,11 +15,12 @@ import qualified Codec.Picture as JP
 import Text.Read
 import Control.Concurrent.Async
 
+import Util
 import Trace
 import App
 import AppDefs
-import HueREST
-import HueSetup
+--import HueREST
+--import HueSetup
 import PersistConfig
 import CmdLineOptions
 import BackgroundProcessing
@@ -40,8 +43,8 @@ main = do
       -- Load configuration (might not be there)
       mbCfg <- loadConfig configFilePath
       -- Bridge connection and user ID
-      bridgeIP <- discoverBridgeIP    $ view pcBridgeIP     <$> mbCfg
-      userID   <- createUser bridgeIP $ view pcBridgeUserID <$> mbCfg
+      bridgeIP <- return $ IPAddress "192.168.1.155"--discoverBridgeIP    $ view pcBridgeIP     <$> mbCfg
+      userID   <- return $ BridgeUserID "123"--createUser bridgeIP $ view pcBridgeUserID <$> mbCfg
       -- We have everything setup, build and store configuration
       let newCfg = (fromMaybe defaultPersistConfig mbCfg)
                        & pcBridgeIP     .~ bridgeIP
@@ -67,12 +70,12 @@ main = do
         withAsync (scheduleWatcher _aePC) $ \_ -> do
           -- Request full bridge configuration
           traceS TLInfo $ "Trying to obtain full bridge configuration..."
-          _aeBC <- bridgeRequestRetryTrace MethodGET bridgeIP noBody userID "config"
+          _aeBC <- fromJust . decode <$> BS.readFile "mock/config.json"--bridgeRequestRetryTrace MethodGET bridgeIP noBody userID "config"
           traceS TLInfo $ "Success, full bridge configuration:\n" <> show _aeBC
           -- Request all scenes (TODO: Maybe do this on every new connection, not once per server?)
           -- http://www.developers.meethue.com/documentation/scenes-api#41_get_all_scenes
           traceS TLInfo $ "Trying to obtain list of bridge scenes..."
-          _aeBridgeScenes <- bridgeRequestRetryTrace MethodGET bridgeIP noBody userID "scenes"
+          _aeBridgeScenes <- fromJust . decode <$> BS.readFile "mock/scenes.json"--bridgeRequestRetryTrace MethodGET bridgeIP noBody userID "scenes"
           traceS TLInfo $ "Success, number of scenes received: " <> show (length _aeBridgeScenes)
           -- TVars for sharing light / group state across threads
           _aeLights      <- atomically . newTVar $ HM.empty

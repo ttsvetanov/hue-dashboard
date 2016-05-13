@@ -1,0 +1,47 @@
+{
+	"name": "Philips hue",
+	"zigbeechannel": 25,
+	"bridgeid": "001888FFFE957531",
+	"mac": "00:17:88:25:75:31",
+	"dhcp": true,
+	"ipaddress": "192.168.1.197",
+	"netmask": "255.255.255.0",
+	"gateway": "192.168.1.1",
+	"proxyaddress": "none",
+	"proxyport": 0,
+	"UTC": "2016-05-02T17:33:18",
+	"localtime": "2016-05-02T19:33:18",
+	"timezone": "Europe/Berlin",
+	"modelid": "BSB002",
+	"swversion": "01032318",
+	"apiversion": "1.13.0",
+	"swupdate": {
+		"updatestate": 0,
+		"checkforupdate": false,
+		"devicetypes": {
+			"bridge": false,
+			"lights": [],
+			"sensors": []
+		},
+		"url": "",
+		"text": "",
+		"notify": true
+	},
+	"linkbutton": false,
+	"portalservices": true,
+	"portalconnection": "connected",
+	"portalstate": {
+		"signedon": true,
+		"incoming": true,
+		"outgoing": true,
+		"communication": "disconnected"
+	},
+	"factorynew": false,
+	"replacesbridgeid": null,
+	"backup": {
+		"status": "idle",
+		"errorcode": 0
+	},
+	"whitelist": {
+	}
+}

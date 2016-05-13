@@ -1,0 +1,274 @@
+{
+	"1": {
+		"state": {
+			"on": false,
+			"bri": 93,
+			"hue": 33389,
+			"sat": 95,
+			"effect": "none",
+			"xy": [
+				0.3583,
+				0.3649
+			],
+			"ct": 217,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Stube Leuchter Eins",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:51:ff:84-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"2": {
+		"state": {
+			"on": false,
+			"bri": 96,
+			"hue": 15212,
+			"sat": 127,
+			"effect": "none",
+			"xy": [
+				0.4487,
+				0.4076
+			],
+			"ct": 349,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Stube Leuchter Zwei",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:51:ff:93-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"3": {
+		"state": {
+			"on": false,
+			"bri": 113,
+			"hue": 15212,
+			"sat": 127,
+			"effect": "none",
+			"xy": [
+				0.4487,
+				0.4076
+			],
+			"ct": 349,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Stube Wand",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:31:52:ff-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"4": {
+		"state": {
+			"on": false,
+			"bri": 93,
+			"alert": "select",
+			"reachable": true
+		},
+		"type": "Dimmable light",
+		"name": "Stube Hocker",
+		"modelid": "LWB006",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:46:c6:22-0b",
+		"swversion": "5.38.1.15095"
+	},
+	"5": {
+		"state": {
+			"on": false,
+			"bri": 240,
+			"hue": 55383,
+			"sat": 254,
+			"effect": "none",
+			"xy": [
+				0.3952,
+				0.1666
+			],
+			"ct": 270,
+			"alert": "select",
+			"colormode": "hs",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Küche Decke",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:4b:ee:7c-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"6": {
+		"state": {
+			"on": false,
+			"bri": 206,
+			"hue": 53498,
+			"sat": 220,
+			"effect": "none",
+			"xy": [
+				0.3453,
+				0.17
+			],
+			"ct": 198,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Stube Schrank",
+		"modelid": "LST002",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:01:1c:af:59-0b",
+		"swversion": "5.50.2.16151"
+	},
+	"7": {
+		"state": {
+			"on": false,
+			"bri": 159,
+			"hue": 11034,
+			"sat": 252,
+			"effect": "none",
+			"xy": [
+				0.559,
+				0.4062
+			],
+			"ct": 500,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Schlafzimmer Decke",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:54:b2:ca-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"8": {
+		"state": {
+			"on": false,
+			"bri": 79,
+			"hue": 8531,
+			"sat": 126,
+			"effect": "none",
+			"xy": [
+				0.4485,
+				0.4076
+			],
+			"ct": 349,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Stube Kugel",
+		"modelid": "LLC020",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:01:16:78:05-0b",
+		"swversion": "5.38.1.14378"
+	},
+	"9": {
+		"state": {
+			"on": false,
+			"bri": 203,
+			"hue": 6316,
+			"sat": 254,
+			"effect": "none",
+			"xy": [
+				0.5628,
+				0.4049
+			],
+			"ct": 500,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Schlafzimmer Kugel",
+		"modelid": "LLC020",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:01:16:8a:5e-0b",
+		"swversion": "5.38.1.14378"
+	},
+	"10": {
+		"state": {
+			"on": false,
+			"bri": 132,
+			"alert": "select",
+			"reachable": true
+		},
+		"type": "Dimmable light",
+		"name": "Schlafzimmer Tisch",
+		"modelid": "LWB006",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:30:ca:ac-0b",
+		"swversion": "5.38.1.15095"
+	},
+	"11": {
+		"state": {
+			"on": true,
+			"bri": 68,
+			"alert": "select",
+			"reachable": true
+		},
+		"type": "Dimmable light",
+		"name": "Kinderzimmer Tisch",
+		"modelid": "LWB006",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:30:e6:ed-0b",
+		"swversion": "5.38.1.15095"
+	},
+	"12": {
+		"state": {
+			"on": true,
+			"bri": 63,
+			"hue": 39226,
+			"sat": 253,
+			"effect": "none",
+			"xy": [
+				0.2562,
+				0.2157
+			],
+			"ct": 153,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Kinderzimmer Decke",
+		"modelid": "LCT007",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:10:53:c3:97-0b",
+		"swversion": "5.38.1.14919"
+	},
+	"14": {
+		"state": {
+			"on": true,
+			"bri": 99,
+			"hue": 12778,
+			"sat": 254,
+			"effect": "none",
+			"xy": [
+				0.4312,
+				0.5038
+			],
+			"ct": 322,
+			"alert": "select",
+			"colormode": "xy",
+			"reachable": true
+		},
+		"type": "Extended color light",
+		"name": "Kinderzimmer Kugel",
+		"modelid": "LLC020",
+		"manufacturername": "Philips",
+		"uniqueid": "00:17:88:01:01:15:c2:cf-0b",
+		"swversion": "5.38.1.14378"
+	}
+}
