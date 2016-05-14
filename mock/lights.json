@@ -70,7 +70,7 @@
 	},
 	"4": {
 		"state": {
-			"on": false,
+			"on": true,
 			"bri": 93,
 			"alert": "select",
 			"reachable": true
