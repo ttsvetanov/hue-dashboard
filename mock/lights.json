@@ -13,7 +13,7 @@
 			"ct": 217,
 			"alert": "select",
 			"colormode": "xy",
-			"reachable": true
+			"reachable": false
 		},
 		"type": "Extended color light",
 		"name": "Stube Leuchter Eins",
@@ -47,7 +47,7 @@
 	},
 	"3": {
 		"state": {
-			"on": false,
+			"on": true,
 			"bri": 113,
 			"hue": 15212,
 			"sat": 127,
@@ -75,16 +75,16 @@
 			"alert": "select",
 			"reachable": true
 		},
-		"type": "Dimmable light",
+		"type": "Color temperature light",
 		"name": "Stube Hocker",
-		"modelid": "LWB006",
+		"modelid": "LTW004",
 		"manufacturername": "Philips",
 		"uniqueid": "00:17:88:01:10:46:c6:22-0b",
 		"swversion": "5.38.1.15095"
 	},
 	"5": {
 		"state": {
-			"on": false,
+			"on": true,
 			"bri": 240,
 			"hue": 55383,
 			"sat": 254,
@@ -107,7 +107,7 @@
 	},
 	"6": {
 		"state": {
-			"on": false,
+			"on": true,
 			"bri": 206,
 			"hue": 53498,
 			"sat": 220,
